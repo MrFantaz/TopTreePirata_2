@@ -1,6 +1,6 @@
-package service;
+package com.example.simpleproject.service;
 
-import daoModel.UserDao;
+import com.example.simpleproject.daoModel.UserDao;
 import model.RatesEntity;
 import model.UsersEntity;
 
@@ -8,7 +8,6 @@ import java.util.List;
 
 public class UserService {
     private UserDao userDao = new UserDao();
-
     public UsersEntity findUser(int id){
         return userDao.findById(id);
     }
