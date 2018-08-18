@@ -42,7 +42,8 @@ public class UserDao {
     }
 
     public List<UsersEntity> findAll() {
-        List<UsersEntity> users = (List<UsersEntity>)  SessionFactoryUtil.getSessionFactory().openSession().createQuery("From UsersEntity ").list();
+        String hql = "from UsersEntity";
+        List<UsersEntity> users = (List<UsersEntity>)  SessionFactoryUtil.getSessionFactory().openSession().createQuery(hql).list();
         return users;
     }
 }

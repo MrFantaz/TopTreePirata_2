@@ -13,11 +13,7 @@ public class UserCreator {
   public String index(){
         StringBuilder stringBuilder = new StringBuilder();
         UserService userService = new UserService();
-        List<UsersEntity> usersEntity = userService.findAllUsers();
-        for (UsersEntity user:usersEntity) {
-            stringBuilder.append("Login "+user.getLogin()+" Email "+user.getEmail());
-        }
 
-        return stringBuilder.toString();
+        return userService.findUser(1).getLogin();
   }
 }
