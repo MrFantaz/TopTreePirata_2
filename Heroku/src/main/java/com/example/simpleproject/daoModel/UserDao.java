@@ -1,7 +1,10 @@
-package daoModel;
+package com.example.simpleproject.daoModel;
 
 
 import com.example.simpleproject.utils.SessionFactoryUtil;
+import model.UsersEntity;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.util.List;
 
