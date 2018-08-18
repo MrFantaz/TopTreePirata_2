@@ -1,19 +1,16 @@
 package daoModel;
 
-import model.RatesEntity;
-import model.UsersEntity;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import utils.SessionFactoryUtil;
+
+import com.example.simpleproject.utils.SessionFactoryUtil;
 
 import java.util.List;
 
 public class UserDao {
-    public UsersEntity findById(int id) {
-        return SessionFactoryUtil.getSessionFactory().openSession().get(UsersEntity.class, id);
+    public model.UsersEntity findById(int id) {
+        return SessionFactoryUtil.getSessionFactory().openSession().get(model.UsersEntity.class, id);
     }
-
-    public void save(UsersEntity user) {
+    
+    public void save(model.UsersEntity user) {
         Session session = SessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
         session.save(user);
@@ -37,8 +34,8 @@ public class UserDao {
         session.close();
     }
 
-    public RatesEntity findRateById(int id) {
-        return SessionFactoryUtil.getSessionFactory().openSession().get(RatesEntity.class, id);
+    public model.RatesEntity findRateById(int id) {
+        return SessionFactoryUtil.getSessionFactory().openSession().get(model.RatesEntity.class, id);
     }
 
     public List<UsersEntity> findAll() {
