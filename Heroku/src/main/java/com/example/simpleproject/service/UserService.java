@@ -1,6 +1,7 @@
-package service;
+package com.example.simpleproject.service;
 
-import daoModel.UserDao;
+
+import com.example.simpleproject.daoModel.UserDao;
 import model.RatesEntity;
 import model.UsersEntity;
 
