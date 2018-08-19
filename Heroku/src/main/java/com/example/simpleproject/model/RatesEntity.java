@@ -1,11 +1,12 @@
-package model;
+package com.example.simpleproject.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Entity
 @Table(name = "rates", schema = "public", catalog = "d3lt7eju0rnvls")
-public class RatesEntity {
+public class RatesEntity implements Serializable{
     @Basic
     @Column(name = "datetime")
     private Timestamp datetime;
@@ -98,4 +99,5 @@ public class RatesEntity {
         return result;
     }
 }
+
 

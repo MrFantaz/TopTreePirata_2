@@ -1,11 +1,12 @@
-package model;
+package com.example.simpleproject.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "categories", schema = "public", catalog = "d3lt7eju0rnvls")
-public class CategoriesEntity {
+public class CategoriesEntity implements Serializable{
     @Basic
     @Column(name = "main_category")
     private String mainCategory;

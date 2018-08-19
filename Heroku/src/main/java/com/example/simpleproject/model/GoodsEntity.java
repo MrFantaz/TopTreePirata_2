@@ -1,11 +1,12 @@
-package model;
+package com.example.simpleproject.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Entity
 @Table(name = "goods", schema = "public", catalog = "d3lt7eju0rnvls")
-public class GoodsEntity {
+public class GoodsEntity implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;

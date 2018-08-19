@@ -1,15 +1,13 @@
-package model;
-
+package com.example.simpleproject.model;
 
 import javax.persistence.*;
-import java.util.HashSet;
+import java.io.Serializable;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "users", schema = "public", catalog = "d3lt7eju0rnvls")
-public class UsersEntity {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UsersEntity implements Serializable {
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private int id;
     @Basic
@@ -21,9 +19,9 @@ public class UsersEntity {
     @Basic
     @Column(name = "password")
     private String password;
-    @OneToMany(mappedBy = "userRate",targetEntity = RatesEntity.class)
+    //    @OneToMany(mappedBy = "userRate",targetEntity = RatesEntity.class)
     private List<RatesEntity> rates;
-    @OneToMany(mappedBy = "userSeller")
+    //    @OneToMany(mappedBy = "userSeller")
     private List<GoodsEntity> goods;
 
     public UsersEntity(String login, String email, String password) {
