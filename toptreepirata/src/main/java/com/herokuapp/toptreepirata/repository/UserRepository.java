@@ -1,7 +1,7 @@
 package com.herokuapp.toptreepirata.repository;
 
-import com.herokuapp.toptreepirata.model.User;
+import com.herokuapp.toptreepirata.model.UsersEntity;
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<User,Long> {
+public interface UserRepository extends CrudRepository<UsersEntity,Long> {
 }
