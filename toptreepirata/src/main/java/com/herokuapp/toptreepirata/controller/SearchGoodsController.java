@@ -18,27 +18,27 @@ import java.util.List;
 @RequestMapping("/")
 public class SearchGoodsController {
 
-//    @Autowired
-//    GoodRepository goodsRepository;
-//
-//    @Autowired
-//    CategotyRepository categotyRepository;
-//
-//    @Value("allGoods")
-//    Iterable<GoodsEntity> goodsEntitiesList;
+    @Autowired
+    GoodRepository goodsRepository;
+
+    @Autowired
+    CategotyRepository categotyRepository;
+
+    @Value("allGoods")
+    List<GoodsEntity> goodsEntitiesList;
 
 
 
     public String index (){
-        //goodsEntitiesList = goodsRepository.findAll();
+        goodsEntitiesList = goodsRepository.findAll();
         return "index";
     }
-//
-//    @GetMapping
-//    public String searchByCategoty(@RequestParam("searchCategory") String myCategory) {
-//
-//        goodsEntitiesList = goodsRepository.findByCategory(categotyRepository.findAllBySubcategory(myCategory));
-//        return "index";
-//    }
+
+    @GetMapping
+    public String searchByCategoty(@RequestParam("searchCategory") String myCategory) {
+
+        goodsEntitiesList = goodsRepository.findByCategory(categotyRepository.findAllBySubcategory(myCategory));
+        return "index";
+    }
 
 }
