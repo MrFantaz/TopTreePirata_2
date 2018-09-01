@@ -1,1 +1,2 @@
 TRACE	2018-08-23 03:15:31,754	0	org.springframework.beans.factory.config.DependencyDescriptor	[http-nio-8080-exec-1]	We are in ctrl RegisterPage
+TRACE	2018-09-01 21:23:35,028	0	org.springframework.beans.factory.config.DependencyDescriptor	[http-nio-8080-exec-1]	We are in ctrl RegisterPage

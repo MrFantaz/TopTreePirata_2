@@ -12,7 +12,7 @@ public class RegisterPage {
     private Logger logger;
 
 
-    @RequestMapping("/")
+   // @RequestMapping("/")
     public String register() {
         logger.trace("We are in ctrl RegisterPage");
         return "register";
