@@ -7,6 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
+
 public interface GoodRepository extends JpaRepository<GoodsEntity, Long> {
 
    List<GoodsEntity> findByCategory (CategoriesEntity category);
