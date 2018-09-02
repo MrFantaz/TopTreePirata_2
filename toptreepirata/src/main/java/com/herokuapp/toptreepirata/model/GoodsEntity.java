@@ -130,6 +130,10 @@ public class GoodsEntity implements Serializable {
 //    }
 
 
+    @Override
+    public String   toString() {
+        return "GoodsEntity{" + "id=" + id + ", title='" + title + '\'' + ", description='" + description + '\'' + ", url='" + url + '\'' + ", startRate=" + startRate + ", endRate=" + endRate + ", price=" + price + ", userSeller=" + userSeller + ", ratesEntity=" + ratesEntity + ", category=" + category + '}';
+    }
 
     @Override
     public boolean equals(Object o) {

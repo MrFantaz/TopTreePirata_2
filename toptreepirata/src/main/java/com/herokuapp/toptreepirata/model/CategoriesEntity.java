@@ -1,5 +1,7 @@
 package com.herokuapp.toptreepirata.model;
 
+import org.apache.log4j.Logger;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -7,10 +9,14 @@ import java.util.List;
 @Entity
 @Table(name = "categories")
 public class CategoriesEntity implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
     @Basic
     @Column(name = "main_category")
     private String mainCategory;
-    @Id
+
     @Column(name = "subcategory")
     private String subcategory;
 
@@ -20,6 +26,13 @@ public class CategoriesEntity implements Serializable {
     public CategoriesEntity() {
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getMainCategory() {
         return mainCategory;
@@ -43,6 +56,11 @@ public class CategoriesEntity implements Serializable {
 
     public void setGoodsEntities(List<GoodsEntity> goodsEntities) {
         this.goodsEntities = goodsEntities;
+    }
+
+    @Override
+    public String toString() {
+        return  "other";
     }
 
     @Override
