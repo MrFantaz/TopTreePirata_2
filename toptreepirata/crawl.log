@@ -1,2 +1,8 @@
 TRACE	2018-08-23 03:15:31,754	0	org.springframework.beans.factory.config.DependencyDescriptor	[http-nio-8080-exec-1]	We are in ctrl RegisterPage
 TRACE	2018-09-01 21:23:35,028	0	org.springframework.beans.factory.config.DependencyDescriptor	[http-nio-8080-exec-1]	We are in ctrl RegisterPage
+TRACE	2018-09-02 00:48:56,410	0	org.springframework.beans.factory.config.DependencyDescriptor	[http-nio-8080-exec-5]	myCategoty Мобильные телефоны
+TRACE	2018-09-02 01:04:40,194	0	org.springframework.beans.factory.config.DependencyDescriptor	[http-nio-8080-exec-5]	myCategoty Мобильные телефоны
+TRACE	2018-09-02 01:08:05,089	0	org.springframework.beans.factory.config.DependencyDescriptor	[http-nio-8080-exec-6]	search []
+TRACE	2018-09-02 01:08:05,091	2	org.springframework.beans.factory.config.DependencyDescriptor	[http-nio-8080-exec-6]	myCategoty Мобильные телефоны
+TRACE	2018-09-02 01:10:50,941	0	org.springframework.beans.factory.config.DependencyDescriptor	[http-nio-8080-exec-7]	search []
+TRACE	2018-09-02 01:10:50,942	1	org.springframework.beans.factory.config.DependencyDescriptor	[http-nio-8080-exec-7]	myCategoty Мобильные телефоны
