@@ -10,5 +10,9 @@ import java.util.List;
 
 public interface GoodRepository extends JpaRepository<GoodsEntity, Long> {
 
+<<<<<<< HEAD
    List<GoodsEntity> findAllByCategoryIsLike (CategoriesEntity category);
+=======
+   List<GoodsEntity> findAllByCategory (CategoriesEntity category);
+>>>>>>> 7fdb9557d552b110ae623ad180e6074290648668
 }

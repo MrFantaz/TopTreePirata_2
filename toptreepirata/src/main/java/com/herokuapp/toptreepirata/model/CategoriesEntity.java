@@ -12,7 +12,11 @@ public class CategoriesEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+<<<<<<< HEAD
     private Long id;
+=======
+    private String id;
+>>>>>>> 7fdb9557d552b110ae623ad180e6074290648668
     @Basic
     @Column(name = "main_category")
     private String mainCategory;
@@ -26,11 +30,19 @@ public class CategoriesEntity implements Serializable {
     public CategoriesEntity() {
     }
 
+<<<<<<< HEAD
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
+=======
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+>>>>>>> 7fdb9557d552b110ae623ad180e6074290648668
         this.id = id;
     }
 

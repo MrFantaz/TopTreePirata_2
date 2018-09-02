@@ -23,16 +23,25 @@ public class IndexController {
 
     @Autowired
     GoodRepository goodsRepository;
+<<<<<<< HEAD
     @Autowired
     CategotyRepository categotyRepository;
 
+=======
+>>>>>>> 7fdb9557d552b110ae623ad180e6074290648668
 
 
     @RequestMapping("/")
     public ModelAndView index(ModelAndView modelAndView){
+<<<<<<< HEAD
         modelAndView.setViewName("index");
 //        modelAndView.addObject("goods",goodsRepository.findAllByCategory("));
         System.out.println(goodsRepository.findAll());
+=======
+        modelAndView.addObject("goods",goodsRepository.findAll());
+        logger.trace("indexCtrl "+goodsRepository.findAll());
+        modelAndView.setViewName("index");
+>>>>>>> 7fdb9557d552b110ae623ad180e6074290648668
         return modelAndView;
     }
 

@@ -23,11 +23,19 @@ public class SearchController {
 
     @RequestMapping("/search")
     public ModelAndView getGoodsByCategory(@RequestParam("category") String myCategoty, ModelAndView model) {
+<<<<<<< HEAD
         logger.trace("log"+categotyRepository.findBySubcategory(myCategoty));
 //        model.addObject("goods", goodsRepository.findAllByCategory(categotyRepository.findBySubcategory(myCategoty)));
 //        model.setViewName("index");
 //        logger.trace("search "+goodsRepository.findAllByCategory(categotyRepository.findBySubcategory(myCategoty)));
 //        logger.trace("myCategoty " + myCategoty);
+=======
+        logger.trace("log"+categotyRepository.findAllBySubcategory(myCategoty));
+        model.addObject("goods", goodsRepository.findAllByCategory(categotyRepository.findAllBySubcategory(myCategoty)));
+        model.setViewName("index");
+        logger.trace("search "+goodsRepository.findAllByCategory(categotyRepository.findAllBySubcategory(myCategoty)));
+        logger.trace("myCategoty " + myCategoty);
+>>>>>>> 7fdb9557d552b110ae623ad180e6074290648668
         return model;
     }
 }
